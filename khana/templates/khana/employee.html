@@ -1,0 +1,259 @@
+{% extends "khana/header.html"%}
+{% load staticfiles %}
+
+{% block content %}
+
+  <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Employee
+                            <small>Description</small>
+							<button type="button" class="btn btn-primary pull-right" style="margin-right: 10px;">Delete Employee</button>
+							
+
+							<button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal" style="margin-right: 10px;">Add Employee</button>
+							
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+							<h2 class="modal-title" id="exampleModalLabel">Employee Details</h2>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div id="page-wrapper">
+
+								<div class="container-fluid">
+
+								<div class="form-group row">
+									<label for="example-text-input" class="col-2 col-form-label"><h4>Employee Name</h4></label>
+								<div>
+									<input class="form-control" type="text" value="Croissant" id="example-text-input">
+								</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-search-input" class="col-2 col-form-label"><h4>Employee Role</h4></label>
+								<div class="col-10">
+								<input class="form-control" type="search" value="No of Units" id="example-search-input">
+								</div>
+								</div>
+								
+								</div>
+								</div>
+
+							</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+							</div>
+							</div>
+							</div>
+</div>
+                        </h1>
+						
+                        <!--<ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-file"></i> Blank Page
+                            </li>
+                        </ol>-->
+						
+						<table class="table table-hover">
+							<thead class="thead-inverse">
+							<tr>
+							
+							<th>
+										<div class="form-check">
+										<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+										</label>
+										</div>
+									</th>
+							<th>ID</th>
+							<th>Employee Name</th>	
+							<th>Employee Role</th>
+							
+							</tr>
+							</thead>
+							 <tbody>
+								<tr id="row-1">
+									<th>
+										<div class="form-check">
+										<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+										</label>
+										</div>
+									</th>
+									<th scope="row"><a data-toggle="modal" data-target="#idModal">1</a>
+									<div class="modal fade" id="idModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+							<h2 class="modal-title" id="exampleModalLabel">Employee</h2>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div id="page-wrapper">
+
+								<div class="container-fluid">
+
+								<div class="form-group row">
+									<label for="example-text-input" class="col-2 col-form-label"><h4>Employee Name</h4></label>
+								<div>
+									<input class="form-control" type="text" value="Croissant" id="example-text-input">
+								</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-search-input" class="col-2 col-form-label"><h4>Employee Role</h4></label>
+								<div class="col-10">
+								<input class="form-control" type="search" value="No of Units" id="example-search-input">
+								</div>
+								</div>
+								
+								</div>
+								</div>
+
+							</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Update</button>
+							</div>
+							</div>
+							</div>
+</div>
+									</th>
+									<td>item 1</td>
+									<td>5</td>
+									
+								</tr>
+								
+								<tr id="row-2">
+									<th>
+										<div class="form-check">
+										<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+										</label>
+										</div>
+									</th>
+									<th scope="row">2</th>
+									<td>item 1</td>
+									<td>10</td>
+									
+								</tr>
+								<tr id="row-3">
+									<th>
+										<div class="form-check">
+										<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+										</label>
+										</div>
+									</th>
+									<th scope="row">3</th>
+									<td>item 1</td>
+									<td>5</td>
+									
+								</tr>
+								<tr id="row-4">
+									<th>
+										<div class="form-check">
+										<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+										</label>
+										</div>
+									</th>
+									<th scope="row">4</th>
+									<td>item 1</td>
+									<td>15</td>
+									
+								</tr>
+								<tr id="row-5">
+									<th>
+										<div class="form-check">
+										<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+										</label>
+										</div>
+									</th>
+									<th scope="row">5</th>
+									<td>item 1</td>
+									<td>25</td>
+									
+								</tr>
+								
+								<tr id="row-6">
+									<th>
+										<div class="form-check">
+										<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+										</label>
+										</div>
+									</th>
+									<th scope="row">2</th>
+									<td>item 1</td>
+									<td>10</td>
+									
+								</tr>
+								<tr id="row-7">
+									<th>
+										<div class="form-check">
+										<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+										</label>
+										</div>
+									</th>
+									<th scope="row">3</th>
+									<td>item 1</td>
+									<td>5</td>
+									
+								</tr>
+								<tr id="row-8">
+									<th>
+										<div class="form-check">
+										<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+										</label>
+										</div>
+									</th>
+									<th scope="row">4</th>
+									<td>item 1</td>
+									<td>15</td>
+									
+								</tr>
+								<tr id="row-9">
+									<th>
+										<div class="form-check">
+										<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+										</label>
+										</div>
+									</th>
+									<th scope="row">5</th>
+									<td>item 1</td>
+									<td>25</td>
+									
+								</tr>
+							 </tbody>
+						</table>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>      
+{% endblock %}

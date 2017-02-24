@@ -6,6 +6,7 @@ urlpatterns = [
 	url(r'^dashboard/$', views.dash, name = "dash"),
 	url(r'^item/$', views.item, name = "item"),
         url(r'^vendor/$', views.vendor, name = "vendor"),
+        url(r'^employee/$', views.employee, name = "employee"),
         
 
 ]

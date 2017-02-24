@@ -11,3 +11,6 @@ def dash(request):
     
 def vendor(request):
     return render(request, "khana/vendor.html", {'content' : []})
+
+def employee(request):
+    return render(request, "khana/employee.html", {'content' : []})
